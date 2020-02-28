@@ -1,8 +1,9 @@
 import React from "react";
-
 import Titles from "./components/Titles";
 import Form from "./components/Form";
 import Weather from "./components/Weather";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const API_KEY = "30087973e54b8d95c7b2e1a4793742de";
 
@@ -46,10 +47,12 @@ class App extends React.Component {
     }
     render() {
         return (
+            
             <div>
+                <Header />
                 <div className="wrapper">
                     <div className="main">
-                        <div className="container">
+                        <div id="weatherDisplay" className="container">
                             <div className="row">
                                 <div className="col-md-5 title-container">
                                     <Titles />
@@ -69,9 +72,11 @@ class App extends React.Component {
                         </div>
                     </div>
                 </div>
+                <Footer />
             </div>
         );
     }
+    
 };
 
 export default App;
